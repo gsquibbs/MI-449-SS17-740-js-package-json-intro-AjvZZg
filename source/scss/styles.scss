@@ -1,0 +1,78 @@
+@import "_variables";
+
+body {
+  margin: $margin-default;
+  background-color: $primary-color;
+  color: $third-color;
+}
+
+table {
+  .menu {
+    position: $default-position;
+    top: 0;
+    left: 0;
+    border-top: 0;
+    border-left: 0;
+    border-right: $primary-border;
+    border-bottom: $primary-border;
+    border-bottom-right-radius: $border-radius-primary * 2;
+    background-color: $second-color;
+    box-shadow: $default-shadow;
+    font-family: $font-family-default;
+
+    h1 {
+      margin: $margin-default 10px;
+      font-size: $font-base-size;
+
+      button {
+        width: 80%;
+        background-color: #ccf;
+        color: $primary-color;
+        text-align: $text-align-primary;
+        font-family: $font-family-default;
+        font-weight: normal;
+        font-size: $font-base-size * 0.6;
+        border: $primary-border;
+        transition: width 0.5s, background-color 0.5s;
+        border-radius: $border-radius-primary;
+
+        td {
+          text-align: $text-align-primary;
+        }
+
+        button:hover {
+          cursor: $cursor-default;
+          background-color: $third-color;
+          width: 85%;
+          transition: width 0.5s, background-color 0.5s;
+
+          button:active,
+          button:focus {
+            outline: none;
+
+            td.label {
+              width: 80px;
+              text-align: $text-align-secondary;
+
+              td.result {
+                text-align: $text-align-secondary;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.clicky {
+  position: $default-position;
+  border-radius: 50%;
+  background-color: $fifth-color;
+  border: $primary-border;
+  box-shadow: $default-shadow;
+
+  :hover {
+    cursor: $cursor-default;
+  }
+}
