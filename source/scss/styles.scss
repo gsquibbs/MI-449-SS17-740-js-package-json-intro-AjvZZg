@@ -23,43 +23,43 @@ table {
     h1 {
       margin: $margin-default 10px;
       font-size: $font-base-size;
+    }
 
-      button {
-        width: 80%;
-        background-color: #ccf;
-        color: $primary-color;
-        text-align: $text-align-primary;
-        font-family: $font-family-default;
-        font-weight: normal;
-        font-size: $font-base-size * 0.6;
-        border: $primary-border;
+    button {
+      width: 80%;
+      background-color: #ccf;
+      color: $primary-color;
+      text-align: $text-align-primary;
+      font-family: $font-family-default;
+      font-weight: normal;
+      font-size: $font-base-size * 0.6;
+      border: $primary-border;
+      transition: width 0.5s, background-color 0.5s;
+      border-radius: $border-radius-primary;
+
+      &:hover {
+        cursor: $cursor-default;
+        background-color: $third-color;
+        width: 85%;
         transition: width 0.5s, background-color 0.5s;
-        border-radius: $border-radius-primary;
+      }
 
-        td {
-          text-align: $text-align-primary;
-        }
+      &:active,
+      &:focus {
+          outline: none;
+      }
+    }
 
-        button:hover {
-          cursor: $cursor-default;
-          background-color: $third-color;
-          width: 85%;
-          transition: width 0.5s, background-color 0.5s;
+    td {
+      text-align: $text-align-primary;
 
-          button:active,
-          button:focus {
-            outline: none;
+      &.label {
+        width: 80px;
+        text-align: $text-align-secondary;
+      }
 
-            td.label {
-              width: 80px;
-              text-align: $text-align-secondary;
-
-              td.result {
-                text-align: $text-align-secondary;
-              }
-            }
-          }
-        }
+      &.result {
+        text-align: $text-align-secondary;
       }
     }
   }

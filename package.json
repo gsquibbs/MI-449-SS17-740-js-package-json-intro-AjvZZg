@@ -12,7 +12,7 @@
     "build:sass": "node-sass source/scss/styles.scss --output=compiled/css --output-style=compressed --source-map=true",
     "build": "run-s build:*",
     "deploy:surge": "surge --project . --domain https://squibbsg-kg-tgc7noax99ajvzzg.surge.sh/",
-    "deploy": "run-s build:* deploy:surge"
+    "deploy": "run-s build deploy:surge"
   },
   "devDependencies": {
     "live-server": "^1.2.0",
